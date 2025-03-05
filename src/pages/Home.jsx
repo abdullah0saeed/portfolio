@@ -23,7 +23,7 @@ const Home = () => {
           <Col md={2} className="fade-in">
             <Card className="rounded-circle shadow-lg">
               <img
-                src="/src/assets/formal.jpg"
+                src="/assets/formal.jpg"
                 alt="Profile"
                 className="img-fluid rounded-circle shadow fade-in"
               />
