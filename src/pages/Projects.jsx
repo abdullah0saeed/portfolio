@@ -5,7 +5,11 @@ const Projects = () => {
   const projectList = [
     {
       title: "RentEase",
-      description: `Web app for renting businesses where users can rent items and admin is able to manage rented items`,
+      description: `
+  <p>Web app for renting businesses where users can rent items and admin is able to manage rented items.</p>
+  <p>Login credentials: (for testing)</p>
+  <p>username: admin, password: 123456</p>
+`,
       link: "https://rental-app-front-steel.vercel.app",
     },
     {
@@ -14,6 +18,8 @@ const Projects = () => {
       link: "https://quiz0maker.netlify.app",
     },
   ];
+
+  const containsHTML = (str) => /<[a-z][\s\S]*>/i.test(str);
 
   return (
     <section id="projects" className="py-5">
@@ -29,7 +35,17 @@ const Projects = () => {
                   <Card.Title className="text-primary fw-bold">
                     {project.title}
                   </Card.Title>
-                  <Card.Text>{project.description}</Card.Text>
+                  {containsHTML(project.description) ? (
+                    // Render HTML if detected
+                    <Card.Text
+                      dangerouslySetInnerHTML={{
+                        __html: project.description,
+                      }}
+                    />
+                  ) : (
+                    // Fallback to plain text
+                    <Card.Text>{project.description}</Card.Text>
+                  )}
                   <a
                     href={project.link}
                     target="_blank"

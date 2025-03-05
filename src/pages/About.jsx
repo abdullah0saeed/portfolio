@@ -19,10 +19,9 @@ const About = () => {
           integrating third-party APIs. I have experience in deploying web apps
           to Netlify and Vercel. I have experience in deploying Node.js apps to
           Render and Vercel. I have experience in deploying MongoDB to MongoDB
-          Atlas. I have experience in deploying React Native apps to Expo. I
-          have experience in using Git for version control. I have experience in
-          using Visual Studio Code for code editing. I have experience in using
-          Postman for API testing.
+          Atlas. I have experience in using Git for version control. I have
+          experience in using Visual Studio Code for code editing. I have
+          experience in using Postman for API testing.
         </p>
         <div className="d-flex justify-content-end">
           <Image
