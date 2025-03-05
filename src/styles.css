@@ -1,0 +1,72 @@
+:root {
+  --primary-color: #6200ea;
+  --secondary-color: #ff6d00;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  background-attachment: fixed; /* Keeps the gradient fixed while scrolling */
+  color: var(--text-color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  padding: 6rem 0;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 2rem;
+}
+
+section:last-child {
+  margin-bottom: 0; /* Remove margin for the last section */
+}
