@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Image } from "react-bootstrap";
 
 const About = () => {
   return (
@@ -24,6 +24,14 @@ const About = () => {
           using Visual Studio Code for code editing. I have experience in using
           Postman for API testing.
         </p>
+        <div className="d-flex justify-content-end">
+          <Image
+            src="/assets/goldenSignature.png"
+            alt="signature"
+            className="img-fluid fade-in rounded-circle my-0"
+            width={200}
+          />
+        </div>
       </Container>
     </section>
   );
