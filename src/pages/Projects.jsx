@@ -1,24 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
-const Projects = () => {
-  const projectList = [
-    {
-      title: "RentEase",
-      description: `
-  <p>Web app for renting businesses where users can rent items and admin is able to manage rented items.</p>
-  <p>Login credentials: (for testing)</p>
-  <p>username: admin, password: 123456</p>
-`,
-      link: "https://rental-app-front-steel.vercel.app",
-    },
-    {
-      title: "Quizzz",
-      description: `Web app for creating, editing, and taking quizzes. Users can create quizzes and take quizzes created by others`,
-      link: "https://quiz0maker.netlify.app",
-    },
-  ];
+import projectList from "../../projectList";
 
+const Projects = () => {
   const containsHTML = (str) => /<[a-z][\s\S]*>/i.test(str);
 
   return (
